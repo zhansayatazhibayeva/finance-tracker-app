@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Finance Tracker
 
-## Getting Started
+A modern fullstack finance tracking application built with Next.js, Prisma, and PostgreSQL.
+Track expenses, organize transactions, and monitor your spending through a clean and responsive dashboard.
 
-First, run the development server:
+🚀 Features
+🔐 User Authentication
+💳 Expense Tracking System
+📊 Financial Dashboard
+🔍 Real-time Expense Search
+🗂️ Expense Categories
+⚡ Server-side Actions
+🌙 Modern Responsive UI
+🧾 PostgreSQL Database Integration
+🚀 Fast Performance with Next.js App Router
+🛠️ Tech Stack
+Frontend
+React
+Next.js App Router
+Tailwind CSS
+Backend
+Next.js Server Actions
+API Routes
+Database & ORM
+PostgreSQL
+Prisma ORM
+Deployment
+Vercel
+📂 Project Structure
+src/
+ ├── app/
+ │    ├── dashboard/
+ │    ├── api/
+ │    ├── signin/
+ │    └── signup/
+ │
+ ├── components/
+ │    ├── dashboard/
+ │    ├── forms/
+ │    └── ui/
+ │
+ ├── actions/
+ │
+ ├── lib/
+ │
+ └── prisma/
+⚙️ Installation
 
-```bash
+Clone the repository:
+
+git clone https://github.com/yourusername/finance-tracker.git
+
+Move into the project folder:
+
+cd finance-tracker
+
+Install dependencies:
+
+npm install
+🔑 Environment Variables
+
+Create a .env file and add:
+
+DATABASE_URL=
+▶️ Running the Project
+
+Run the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
+🧠 Learning Goals Behind the Project
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project was built to practice:
 
-## Learn More
+Fullstack application architecture
+Database modeling with Prisma
+PostgreSQL integration
+Server-side rendering and actions
+Modern React patterns
+Real-world CRUD operations
+Scalable folder architecture
+📸 Screenshots
 
-To learn more about Next.js, take a look at the following resources:
+Add screenshots of:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Dashboard
+Expense Table
+Add Expense Form
+Authentication Pages
+🌍 Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The project is deployed using:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+▲ Vercel
+PostgreSQL Database
