@@ -9,19 +9,19 @@ export default function Home() {
         This app helps you track your expenses, set budgets, and visualize your
         spending habits. Get started by logging in or signing up!
       </p>
-      <Image
-        src="/finance-illustration.png"
-        alt="Finance Illustration"
-        width={600}
-        height={400}
-        className="mt-6 rounded-lg shadow-lg"
-      />
       <Link
         href="/login"
-        className="mt-6 bg-blue-500 text-white px-4 py-2 rounded"
+        className="mt-6 bg-blue-500 text-white px-8 py-4 rounded"
       >
         Get Started
       </Link>
+      <Image
+        src="/image.png"
+        alt="Finance Illustration"
+        width={1000}
+        height={800}
+        className="mt-6 rounded-lg shadow-lg"
+      />
     </div>
   );
 }
