@@ -9,6 +9,7 @@ import { Prisma } from "@prisma/client";
 import Link from "next/link";
 import ExpenseCharts from "@/components/charts/expense-charts";
 import ExpenseSearch from "@/components/expense-search";
+import Sidebar from "@/components/sidebar";
 
 type DashboardProps = {
   searchParams: Promise<{
@@ -56,39 +57,38 @@ export default async function Dashboard({ searchParams }: DashboardProps) {
   const total = expenses.reduce((sum, expense) => sum + expense.amount, 0);
 
   return (
-    <div className="bg-gray-900 text-gray-200 p-10">
-      <div className="flex flex-row justify-between w-full">
-        <Link href="/app/dashboard" className="text-3xl font-bold">
-          Dashboard
-        </Link>
-        <p className="text-gray-500">{session.user.email}</p>
-        <Link href="/api/auth/signout" className="text-gray-500">
-          Sign Out
-        </Link>
-      </div>
-      <p className="my-5">
-        Track spending, filter by date/category, and visualize your expenses
-      </p>
-      <Section>
-        <div className="flex gap-4">
-          <FilterExpenses
-            start={params.start}
-            end={params.end}
-            category={params.category}
-          />
-          <AddExpense />
+    <div className="h-screen bg-gray-900 text-gray-200 flex overflow-hidden">
+      <Sidebar />
+
+      <main className="flex-1 overflow-y-auto p-10">
+        <div className="mb-10 text-right">
+          <h1 className="text-3xl font-bold">Dashboard</h1>
+          <p className="my-5">
+            Track spending, filter by date/category, and visualize your expenses
+          </p>
         </div>
-        <div className="mt-8">
-          <span>You spent: </span>
-          <span className="ml-2  font-bold text-xl rounded-xl border-gray-300 py-2 px-3  ">
-            {total.toFixed(2)} tg
-          </span>
-        </div>
-        <div className="mt-6">
-          <ExpenseTable expenses={expenses} />
-        </div>
-        <ExpenseCharts expenses={expenses} />
-      </Section>
+
+        <Section>
+          <div className="flex gap-4">
+            <FilterExpenses
+              start={params.start}
+              end={params.end}
+              category={params.category}
+            />
+            <AddExpense />
+          </div>
+          <div className="mt-8">
+            <span>You spent: </span>
+            <span className="ml-2  font-bold text-xl rounded-xl border-gray-300 py-2 px-3  ">
+              {total.toFixed(2)} tg
+            </span>
+          </div>
+          <div className="mt-6">
+            <ExpenseTable expenses={expenses} />
+          </div>
+          <ExpenseCharts expenses={expenses} />
+        </Section>
+      </main>
     </div>
   );
 }
